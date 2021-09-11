@@ -10,8 +10,19 @@ App will demonstrate the creating task/notes, maintain and share your contact
 * Maintained Received task/notes
 * Auto fill contact number in filed if its exist in phone settings.
 
-![BShopping_App](assets/images/share_app_one.jpg)
-![BShopping_App](assets/images/share_app_two.jpg)
-![BShopping_App](assets/images/share_app_three.jpg)
-![BShopping_App](assets/images/share_app_four.jpg)
-![BShopping_App](assets/images/share_app_five.jpg)
+Accept the access account permission to fetch contact           |  Contact list
+:-------------------------:|:-------------------------:
+![BShopping_App](assets/images/share_app_one.jpg)  |  ![BShopping_App](assets/images/share_app_two.jpg)
+
+Note's View           |  Task's View
+:-------------------------:|:-------------------------:
+![BShopping_App](assets/images/share_app_three.jpg)  |  ![BShopping_App](assets/images/share_app_four.jpg)
+
+Home Page           |  Push Notification
+:-------------------------:|:-------------------------:
+![BShopping_App](assets/images/share_app_five.jpg)  | ![BShopping_App](assets/images/share_app_six.jpg)
+
+
+
+
+
