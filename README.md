@@ -1,4 +1,4 @@
-# BSharing_App_For_Notes_And_Task
+# BSharing_App_For_Notes_And_Tasks
 
 App will demonstrate the creating task/notes, maintain and share your contact
 
