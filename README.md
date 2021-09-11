@@ -1,9 +1,9 @@
 # BSharing_App_For_Notes_And_Tasks
 
-Purpose of app is to create, maintiain task/notes and sharing this same to your collegues who has the same app.
+Purpose of app is to create, maintiain task/notes and sharing this same to your colleagues who has the same app.
 
 * Used firebase to maintain the notes/task
-* Perfrom CRUD task/note.
+* Perform CRUD task/note.
 * Integrated the push notification(Cloud Messaging)
 * Used Provider
 * Fetching contact from base, without 3rd party plugin
