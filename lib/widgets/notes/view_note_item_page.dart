@@ -77,7 +77,7 @@ class _ViewNoteItemPageState extends State<ViewNoteItemPage> {
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(Colors.green.shade400)),
-                  child: Text('Save'),
+                  child: Text('Update'),
                 ),
               )
             ],
