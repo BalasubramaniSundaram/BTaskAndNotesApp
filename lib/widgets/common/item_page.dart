@@ -92,7 +92,9 @@ class _SendItemPageState extends State<SendItemPage> {
               height: 5,
             ),
             Text(
-              'Sent to: ${doc['to']}',
+              widget.databaseName == 'sent'
+                  ? 'Sent to: ${doc['to']}'
+                  : 'From: ${doc['from']}',
               textAlign: TextAlign.left,
             ),
             SizedBox(
@@ -143,7 +145,9 @@ class _SendItemPageState extends State<SendItemPage> {
               height: 5,
             ),
             Text(
-              'Sent to: ${doc['to']}',
+              widget.databaseName == 'sent'
+                  ? 'Sent to: ${doc['to']}'
+                  : 'From: ${doc['from']}',
               textAlign: TextAlign.left,
             ),
             SizedBox(

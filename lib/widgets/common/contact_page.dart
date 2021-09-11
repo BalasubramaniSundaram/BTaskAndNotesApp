@@ -130,8 +130,6 @@ class _ShareWithContactsState extends State<ShareWithContacts> {
                                       },
                                     );
                                   });
-
-                                  ;
                                 },
                                 icon: Icon(Icons.send),
                               ),
@@ -158,13 +156,37 @@ class _ShareWithContactsState extends State<ShareWithContacts> {
                           title: Text(nonUsers[index].name),
                           subtitle: Text(nonUsers[index].phoneNumber),
                           trailing: TextButton(
-                            onPressed: () {
-                              setState(() {
-                                addUser({
-                                  'userName': nonUsers[index].name,
-                                  'phoneNumber': nonUsers[index].phoneNumber
-                                });
-                              });
+                            onPressed: () async {
+                              await showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: Text(
+                                        'Instead of invite is used the add for direct register users, its completely easy registering of user B. \nPlease remember username and phone number format to login to User B Before Ok '
+                                        '\n User Name : ${nonUsers[index].name} \n Phone Number: ${nonUsers[index].phoneNumber}'),
+                                    actions: [
+                                      ElevatedButton(
+                                          onPressed: () async {
+                                            setState(() {
+                                              addUser({
+                                                'userName':
+                                                    nonUsers[index].name,
+                                                'phoneNumber':
+                                                    nonUsers[index].phoneNumber
+                                              });
+                                            });
+                                            Navigator.of(context).pop();
+                                          },
+                                          child: Text('Ok')),
+                                      ElevatedButton(
+                                          onPressed: () async {
+                                            Navigator.of(context).pop();
+                                          },
+                                          child: Text('Cancel'))
+                                    ],
+                                  );
+                                },
+                              );
                             },
                             child: Text('Add'),
                           ),
