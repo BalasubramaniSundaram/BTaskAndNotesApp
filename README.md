@@ -9,21 +9,18 @@ Purpose of app is to create, maintiain task/notes and sharing this same to your 
 * Fetching contact from base, without 3rd party plugin
 * Maintained Sent task/notes
 * Maintained Received task/notes
-* Auto fill contact number in filed if its exist in phone settings.
+* Auto fill contact number in filled if its exist in phone settings.
+
+![BShareApp_One](images/home_page.jpg)
 
 Accept the access account permission to fetch contact           |  Contact list
 :-------------------------:|:-------------------------:
-![BShopping_App](assets/images/share_app_one.jpg)  |  ![BShopping_App](assets/images/share_app_two.jpg)
+![BShareApp_One](images/share_app_one.jpg)  |  ![BShareApp_One](images/share_app_two.jpg)
 
 Note's View           |  Task's View
 :-------------------------:|:-------------------------:
-![BShopping_App](assets/images/share_app_three.jpg)  |  ![BShopping_App](assets/images/share_app_four.jpg)
+![BShareApp_One](images/share_app_three.jpg)  |  ![BShareApp_One](images/share_app_four.jpg)
 
 Home Page           |  Push Notification
 :-------------------------:|:-------------------------:
-![BShopping_App](assets/images/share_app_five.jpg)  | ![BShopping_App](assets/images/share_app_six.jpg)
-
-
-
-
-
+![BShareApp_One](images/share_app_five.jpg)  | ![BShareApp_One](images/share_app_six.jpg)

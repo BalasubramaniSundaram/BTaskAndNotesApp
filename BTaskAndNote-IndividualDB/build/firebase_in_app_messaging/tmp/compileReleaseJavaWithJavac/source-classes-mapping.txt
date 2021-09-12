@@ -1,0 +1,4 @@
+io/flutter/plugins/firebase/inappmessaging/FirebaseInAppMessagingPlugin.java
+ io.flutter.plugins.firebase.inappmessaging.FirebaseInAppMessagingPlugin
+com/flutter/plugins/firebase/inappmessaging/BuildConfig.java
+ com.flutter.plugins.firebase.inappmessaging.BuildConfig

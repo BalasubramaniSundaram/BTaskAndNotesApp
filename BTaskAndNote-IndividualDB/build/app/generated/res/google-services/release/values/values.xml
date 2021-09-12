@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">968199745103-ggqqj78b46dod82nklupp7d5s3ka50ad.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">968199745103</string>
+    <string name="google_api_key" translatable="false">AIzaSyBj-HGPKVU-2zNfzyg9Sf7QCq_bqygLVoc</string>
+    <string name="google_app_id" translatable="false">1:968199745103:android:64bae010e061d43b30443a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBj-HGPKVU-2zNfzyg9Sf7QCq_bqygLVoc</string>
+    <string name="google_storage_bucket" translatable="false">noteandtasksharingapp.appspot.com</string>
+    <string name="project_id" translatable="false">noteandtasksharingapp</string>
+</resources>

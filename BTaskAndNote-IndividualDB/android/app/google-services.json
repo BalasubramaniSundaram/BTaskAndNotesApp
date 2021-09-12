@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "968199745103",
+    "project_id": "noteandtasksharingapp",
+    "storage_bucket": "noteandtasksharingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968199745103:android:64bae010e061d43b30443a",
+        "android_client_info": {
+          "package_name": "com.example.sharing_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968199745103-6pj7kqhnlpche5rskjo5a2g80g7ql8i3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharing_app",
+            "certificate_hash": "520dc3fc030ec1c2b14835963d1f90f3c8159658"
+          }
+        },
+        {
+          "client_id": "968199745103-ggqqj78b46dod82nklupp7d5s3ka50ad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj-HGPKVU-2zNfzyg9Sf7QCq_bqygLVoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968199745103-ggqqj78b46dod82nklupp7d5s3ka50ad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
