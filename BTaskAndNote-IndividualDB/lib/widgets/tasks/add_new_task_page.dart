@@ -143,7 +143,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                                   Border.all(color: Colors.black, width: 1.0)),
                           height: 50.0,
                           width: 150.0,
-                          child: taskTimePicker(context, '.tasks'),
+                          child: taskTimePicker(context, 'tasks'),
                         )
                         //taskDateTimePicker(context)
                       ]),
@@ -174,7 +174,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                                   Border.all(color: Colors.black, width: 1.0)),
                           height: 50.0,
                           width: 150.0,
-                          child: taskTimePicker(context, '.reminder'),
+                          child: taskTimePicker(context, 'reminder'),
                         )
                         //taskDateTimePicker(context)
                       ]),
@@ -250,6 +250,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+
     if (reminderDateController.text.isEmpty ||
         taskDateController.text.isEmpty) {
       reminderDateController.text =

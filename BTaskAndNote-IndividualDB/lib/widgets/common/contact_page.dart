@@ -55,6 +55,7 @@ class _ShareWithContactsState extends State<ShareWithContacts> {
             final List<BContact> existUsers = contactRepository
                 .getExistingUsers(userRepository.currentUser!.phoneNumber);
             final List<BContact> nonUsers = contactRepository.getNonUsers();
+            nonUsers.sort();
 
             return Column(
               children: [

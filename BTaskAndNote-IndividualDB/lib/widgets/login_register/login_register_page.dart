@@ -38,13 +38,26 @@ class _RegisterPageState extends State<LoginAndRegisterPage> {
         body: SafeArea(
           child: Center(
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.50,
-              padding: EdgeInsets.all(40),
+              height: MediaQuery.of(context).size.height * 0.80,
+              padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.10),
               child: Form(
                 key: loginFormGlobalKey,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        'images/app_icon.png',
+                        height: 100,
+                        width: 100,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:
+                          Text('BTaskAndNote', style: TextStyle(fontSize: 40)),
+                    ),
                     Text('${widget.pageType}', style: TextStyle(fontSize: 20)),
                     TextFormField(
                       controller: userNameController,

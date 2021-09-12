@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class BContact {
+class BContact implements Comparable<BContact> {
   BContact(this.name, this.phoneNumber, this.reference);
 
   final String name;
@@ -8,6 +8,11 @@ class BContact {
   DocumentReference? reference;
 
   factory BContact.fromJson(dynamic json) => contactFromJson(json);
+
+  @override
+  int compareTo(BContact other) {
+    return name.compareTo(other.name);
+  }
 }
 
 BContact contactFromJson(dynamic data) {
