@@ -9,8 +9,8 @@
 
 
    <application
-        android:label="sharing_app"
-        android:icon="@mipmap/ic_launcher">
+        android:label="BTaskAndNotes"
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
