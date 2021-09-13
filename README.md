@@ -3,7 +3,7 @@
 Purpose of app is to create, maintiain task/notes and sharing this same to your colleagues who has the same app.
 
 * Used firebase to maintain the notes/task
-* Perform CRUD task/note.
+* Perform read and write the task/note.
 * Integrated the push notification(Cloud Messaging)
 * Used Provider
 * Fetching contact from base, without 3rd party plugin
