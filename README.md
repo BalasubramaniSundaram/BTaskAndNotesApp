@@ -13,7 +13,7 @@ Purpose of app is to create, maintiain task/notes and sharing this same to your 
 
 ![BShareApp_One](images/home_page.jpg)
 
-Accept the access account permission to fetch contact           |  Contact list
+Accept the access account permission to fetch contact           |  Auto fetch Contact list
 :-------------------------:|:-------------------------:
 ![BShareApp_One](images/share_app_one.jpg)  |  ![BShareApp_One](images/share_app_two.jpg)
 
