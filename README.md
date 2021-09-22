@@ -15,12 +15,16 @@ Purpose of app is to create, maintiain task/notes and sharing this same to your 
 
 Accept the access account permission to fetch contact           |  Auto fetch Contact list
 :-------------------------:|:-------------------------:
-![BShareApp_One](images/share_app_one.jpg)  |  ![BShareApp_One](images/share_app_two.jpg)
+![BShareApp_two](images/share_app_one.jpg)  |  ![BShareApp_three](images/share_app_two.jpg)
 
 Note's View           |  Task's View
 :-------------------------:|:-------------------------:
-![BShareApp_One](images/share_app_three.jpg)  |  ![BShareApp_One](images/share_app_four.jpg)
+![BShareApp_four](images/share_app_three.jpg)  |  ![BShareApp_five](images/share_app_four.jpg)
 
 Home Page           |  Push Notification
 :-------------------------:|:-------------------------:
-![BShareApp_One](images/share_app_five.jpg)  | ![BShareApp_One](images/share_app_six.jpg)
+![BShareApp_six](images/share_app_five.jpg)  | ![BShareApp_seven](images/share_app_six.jpg)
+
+Localization Support           |  Chinese Language
+:-------------------------:|:-------------------------:
+![BShareApp_eight](images/share_app_seven.jpg)  | ![BShareApp_nine](images/share_app_eight.jpg)
