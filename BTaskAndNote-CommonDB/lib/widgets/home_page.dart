@@ -11,6 +11,7 @@ import 'common/contact_page.dart';
 import 'common/item_page.dart';
 import 'login_register/login_register_page.dart';
 import 'notes/notes_home_page.dart';
+import 'common/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -63,9 +64,20 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue.shade300,
-          leading: IgnorePointer(
-              ignoring: true,
-              child: IconButton(onPressed: () {}, icon: Icon(Icons.face))),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePageView(
+                      repository.currentUser!.name,
+                      'images/app_icon.png',
+                      '${repository.currentUser!.name}@gmail.com',
+                      repository.currentUser!.phoneNumber,
+                    ),
+                  ),
+                );
+              },
+              icon: Icon(Icons.face)),
           title: buildUserDisplayBar(context, repository),
         ),
         body: Padding(

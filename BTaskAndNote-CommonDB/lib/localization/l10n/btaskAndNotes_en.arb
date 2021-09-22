@@ -1,0 +1,53 @@
+{
+  "backTo": "Back",
+    "@backTo": {
+      "description": "Back to the page",
+      "type": "text"
+    },
+  "doNotHaveAccount": "Dou you have account ?",
+    "@doNotHaveAccount": {
+      "description": "Knowing about whether user having account are not",
+      "type": "text"
+    },
+  "invalidPhoneNumber": "Invalid Phone Number",
+     "@invalidPhoneNumber": {
+       "description": "Showing the error message of invalid phone number",
+       "type": "text"
+     },
+  "invalidUserName": "Invalid UserName",
+     "@invalidUserName": {
+       "description": "Showing the error message of invalid username",
+       "type": "text"
+     },
+   "phoneNumber": "PhoneNumber",
+     "@phoneNumber": {
+       "description": "phone number",
+       "type": "text"
+     },
+    "signIn": "Sign In",
+       "@signIn": {
+         "description": "Sign In",
+         "type": "text"
+       },
+    "signUp": "Sign Up",
+       "@signUp": {
+         "description": "Sign Up",
+         "type": "text"
+       },
+    "userName": "UserName",
+       "@userName": {
+         "description": "UserName",
+         "type": "text"
+       },
+
+       "login": "Login",
+          "@login": {
+            "description": "login",
+            "type": "text"
+          },
+      "register": "Register",
+         "@register": {
+           "description": "UserName",
+           "type": "text"
+         },
+}

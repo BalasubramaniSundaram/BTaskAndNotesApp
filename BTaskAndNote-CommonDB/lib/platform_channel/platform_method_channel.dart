@@ -11,7 +11,7 @@ Future<String> requestReadContactPermission() async {
   }
 }
 
-Future<String> setPhoneNumber() async {
+Future<String?> setPhoneNumber() async {
   try {
     return await platformChannel.invokeMethod('getPhoneNumber');
   } on PlatformException catch (e) {

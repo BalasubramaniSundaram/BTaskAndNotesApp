@@ -1,0 +1,12 @@
+{
+   "backTo" : "还",
+   "doNotHaveAccount" : "无帐户",
+   "invalidPhoneNumber" : "无效密码",
+   "invalidUserName" : "无效用户名",
+   "phoneNumber" : "电话号码",
+   "signIn" : "登录",
+   "signUp" : "登记",
+   "userName" : "用户名",
+   "login" : "登录",
+   "register" : "注册",
+}

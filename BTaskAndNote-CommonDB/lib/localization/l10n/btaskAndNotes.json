@@ -1,0 +1,11 @@
+{
+  "backTo" : "Back",
+  "doNotHaveAccount" : "Don't have account",
+  "invalidPhoneNumber" : "Invalid Passcode",
+  "invalidUserName" : "Invalid UserName",
+  "phoneNumber" : "Phone Number",
+  "signIn" : "Sign In",
+  "signUp" : "Sign Up",
+  "loginIn": "Login In",
+  "register": "Register"
+}

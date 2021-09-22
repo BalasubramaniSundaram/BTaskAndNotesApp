@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:sharing_app/database/database_provider.dart';
+import 'package:sharing_app/localization/localization.dart';
 import 'package:sharing_app/model/user_model.dart';
 import 'package:sharing_app/platform_channel/platform_method_channel.dart';
 import 'package:sharing_app/repository/user_repository.dart';
@@ -27,135 +28,148 @@ class _RegisterPageState extends State<LoginAndRegisterPage> {
   late BUserRepository userRepository;
   bool isUserExistOrNot = false;
   String errorMessage = '';
+  late BLocalizations _localization;
+
 
   @override
   Widget build(BuildContext context) {
+    print(_localization.phoneNumber);
     return WillPopScope(
       onWillPop: () {
         return Future(() => false);
       },
       child: Scaffold(
-        body: SafeArea(
-          child: Center(
-            child: Container(
-              height: MediaQuery.of(context).size.height * 0.80,
-              padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.10),
-              child: Form(
-                key: loginFormGlobalKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        'images/app_icon.png',
-                        height: 100,
-                        width: 100,
+          body: SafeArea(
+            child: Center(
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.80,
+                padding:
+                    EdgeInsets.all(MediaQuery.of(context).size.width * 0.10),
+                child: Form(
+                  key: loginFormGlobalKey,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset(
+                          'images/app_icon.png',
+                          height: 100,
+                          width: 100,
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child:
-                          Text('BTaskAndNote', style: TextStyle(fontSize: 40)),
-                    ),
-                    Text('${widget.pageType}', style: TextStyle(fontSize: 20)),
-                    TextFormField(
-                      controller: userNameController,
-                      decoration: InputDecoration(hintText: 'UserName'),
-                      keyboardType: TextInputType.text,
-                      validator: (String? value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter user name';
-                        } else if (value.length <= 3) {
-                          return 'User name should more than 3 character';
-                        }
-
-                        return null;
-                      },
-                    ),
-                    TextFormField(
-                      controller: phoneNumberController,
-                      decoration: InputDecoration(hintText: 'Phone Number'),
-                      keyboardType: TextInputType.number,
-                      validator: (String? value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter phone number';
-                        } else if (value.length < 10) {
-                          return 'Please valid phone number length';
-                        } else if (value.length > 12) {
-                          return 'Number must less then 12';
-                        }
-
-                        return null;
-                      },
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ElevatedButton(
-                        onPressed: () async {
-                          if (loginFormGlobalKey.currentState!.validate()) {
-                            if (widget.pageType == 'Register') {
-                              performRegister();
-                            } else {
-                              performLogin();
-                            }
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('BTaskAndNote',
+                            style: TextStyle(fontSize: 40)),
+                      ),
+                      Text(
+                          checkPageType()
+                              ? '${_localization.login}'
+                              : '${_localization.register}',
+                          style: TextStyle(fontSize: 20)),
+                      TextFormField(
+                        controller: userNameController,
+                        decoration: InputDecoration(
+                            hintText: '${_localization.userName}'),
+                        keyboardType: TextInputType.text,
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter user name';
+                          } else if (value.length <= 3) {
+                            return 'User name should more than 3 character';
                           }
+
+                          return null;
                         },
-                        child: Text(checkPageType() ? 'Sign Up' : 'Sign In'),
                       ),
-                    ),
-                    Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            checkPageType()
-                                ? "Back to"
-                                : "Don't have an account?",
-                            textAlign: TextAlign.right,
-                          ),
-                          TextButton(
-                              onPressed: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => LoginAndRegisterPage(
-                                      pageType: checkPageType()
-                                          ? 'Login'
-                                          : 'Register'),
-                                ));
-                              },
-                              child: Text(
-                                checkPageType() ? "Sign In" : "Sign Up",
-                                textAlign: TextAlign.left,
-                              ))
-                        ],
+                      TextFormField(
+                        controller: phoneNumberController,
+                        decoration: InputDecoration(
+                            hintText: '${_localization.phoneNumber}'),
+                        keyboardType: TextInputType.number,
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter phone number';
+                          } else if (value.length < 10) {
+                            return 'Please valid phone number length';
+                          } else if (value.length > 12) {
+                            return 'Number must less then 12';
+                          }
+
+                          return null;
+                        },
                       ),
-                    ),
-                    Visibility(
-                      visible: errorMessage.isNotEmpty,
-                      child: Text(
-                        errorMessage,
-                        style: TextStyle(color: Colors.red),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          onPressed: () async {
+                            if (loginFormGlobalKey.currentState!.validate()) {
+                              if (widget.pageType == 'Register') {
+                                performRegister();
+                              } else {
+                                performLogin();
+                              }
+                            }
+                          },
+                          child: Text(checkPageType()
+                              ? '${_localization.signUp}'
+                              : '${_localization.signIn}'),
+                        ),
                       ),
-                    )
-                  ],
+                      Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              checkPageType()
+                                  ? "${_localization.backTo}"
+                                  : "${_localization.doNotHaveAccount}",
+                              textAlign: TextAlign.right,
+                            ),
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => LoginAndRegisterPage(
+                                        pageType: checkPageType()
+                                            ? '${_localization.login}'
+                                            : '${_localization.register}'),
+                                  ));
+                                },
+                                child: Text(
+                                  checkPageType()
+                                      ? '${_localization.signIn}'
+                                      : '${_localization.signUp}',
+                                  textAlign: TextAlign.left,
+                                ))
+                          ],
+                        ),
+                      ),
+                      Visibility(
+                        visible: errorMessage.isNotEmpty,
+                        child: Text(
+                          errorMessage,
+                          style: TextStyle(color: Colors.red),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 
   @override
   void didChangeDependencies() async {
     super.didChangeDependencies();
     userRepository = Provider.of<BUserRepository>(context, listen: false);
+    _localization = BLocalizations.of(context);
 
-    await setPhoneNumber().then((value) {
-      if (value != '0000000000') {
-        phoneNumberController.text = value;
-      }
+    await setPhoneNumber().then((String? value) {
+      phoneNumberController.text = value ?? '';
     });
 
     /// Checking the user exist or not and auto-register too
@@ -227,11 +241,7 @@ class _RegisterPageState extends State<LoginAndRegisterPage> {
                 ElevatedButton(
                     onPressed: () {
                       /// Navigate to login page
-                      Navigator.pushReplacement(context, MaterialPageRoute(
-                        builder: (context) {
-                          return LoginAndRegisterPage(pageType: 'Login');
-                        },
-                      ));
+                      Navigator.of(context).pop();
                     },
                     child: Text('Ok'))
               ],
