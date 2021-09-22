@@ -27,4 +27,4 @@ Home Page           |  Push Notification
 
 Localization Support           |  Chinese Language
 :-------------------------:|:-------------------------:
-![BShareApp_eight](images/share_app_seven.jpg)  | ![BShareApp_nine](images/share_app_eight.jpg)
+![BShareApp_eight](images/share_app_seven.png)  | ![BShareApp_nine](images/share_app_eight.png)
